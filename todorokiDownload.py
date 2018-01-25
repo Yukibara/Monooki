@@ -3,9 +3,12 @@
 import urllib.request
 import os
 
-# proxy = urllib.request.ProxyHandler({'http': '202.211.8.4:8080'})
-# opener = urllib.request.build_opener(proxy)
-# urllib.request.install_opener(opener)
+#proxyを使用する場合は以下のコメントを外して、適宜設定すること。
+#proxy_add="202.211.8.4"
+#proxy_port="8080"
+#proxy = urllib.request.ProxyHandler({'http': proxy_add+":"+proxy_port})
+#opener = urllib.request.build_opener(proxy)
+#urllib.request.install_opener(opener)
 
 dict1={1:"fm_",2:"la_",3:"di_1_",4:"di_2_",5:"ps_",6:"am_"}
 dict2={1:"_p",2:"_q"}
