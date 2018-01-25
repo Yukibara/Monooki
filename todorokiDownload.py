@@ -31,6 +31,7 @@ for i in range(1,7):
                 try:
                     urllib.request.urlretrieve(url, targ_dir+(dict1[i])[:-1]+url[41:])
                     print("Downloading "+url)
-                    time.sleep(0.2)
+                    # 1秒空けて次のダウンロードへ
+                    time.sleep(1)
                 except urllib.error.URLError:
                     break
