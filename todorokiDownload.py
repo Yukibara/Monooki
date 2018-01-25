@@ -2,6 +2,7 @@
 
 import urllib.request
 import os
+import time
 
 #proxyを使用する場合は以下のコメントを外して、適宜設定すること。
 #proxy_add="202.211.8.4"
@@ -27,8 +28,9 @@ for i in range(1,7):
                     url  = "http://www5a.biglobe.ne.jp/~todoroki/data/"+dict1[i]+"t_"+str(k)+"_"+str(m)+dict2[j]+".pdf"
                 elif j==3:
                     url ="http://www5a.biglobe.ne.jp/~todoroki/data/"+dict1[i]+"p_"+str(k)+"_"+str(m)+".pdf"
-                print(url)
                 try:
                     urllib.request.urlretrieve(url, targ_dir+(dict1[i])[:-1]+url[41:])
+                    print("Downloading "+url)
+                    time.sleep(0.2)
                 except urllib.error.URLError:
                     break
